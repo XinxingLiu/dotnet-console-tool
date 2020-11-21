@@ -4,26 +4,16 @@ This project is to demo how to create a console app in dotnet core, with package
 
 ## Build and Release
 
-0. enter project folder:
+### build and pack:
+
 ```bash
 cd DataProcessor/
-```
-
-1. clean up:
-
-```bash
-dotnet clean -c Release
-```
-
-2. build and pack:
-
-```bash
 dotnet pack -c Release
 ```
 
-Local path to DataProcessor NuGet package will be `nupkg\DataProcessor.0.0.1.nupkg`.
+### release
 
-3. [optional] push to your NuGet server as needed.
+Local path to DataProcessor NuGet package will be `nupkg\DataProcessor.0.0.1.nupkg`. You can also push to your NuGet server as needed.
 
 ## Install
 
