@@ -4,6 +4,11 @@ This project is to demo how to create a console app in dotnet core, with package
 
 ## Build and Release
 
+0. enter project folder:
+```bash
+cd DataProcessor/
+```
+
 1. clean up:
 
 ```bash
@@ -16,7 +21,7 @@ dotnet clean -c Release
 dotnet pack -c Release
 ```
 
-Local path to DataProcessor NuGet package will be `DataProcessor\nupkg\DataProcessor.0.0.1.nupkg`.
+Local path to DataProcessor NuGet package will be `nupkg\DataProcessor.0.0.1.nupkg`.
 
 3. [optional] push to your NuGet server as needed.
 
@@ -25,8 +30,8 @@ Local path to DataProcessor NuGet package will be `DataProcessor\nupkg\DataProce
 To install the console app as dotnet tool on a machine, make sure you have dotnet sdk 3.1 installed, and run the following command:
 
 ```bash
-package_source="DataProcessor\nupkg\"
-dotnet tool install --add-source $package_source FormDataProcessor -g
+package_source="nupkg"
+dotnet tool install --add-source $package_source DataProcessor -g
 ```
 
 If you want to use a package on your NuGet server, point `package_source` to your server. For example, if you use Azure DevOps artifact, `https://pkgs.dev.azure.com/<your org>/_packaging/<your project>/nuget/v3/index.json`
@@ -63,7 +68,7 @@ Start validating. Data sources:
         /home/user/data-folder1
         /home/user/data-folder2
 Validating data.
-Finish Validation. See validation reports under /home/user/output.
+Finish validation. See validation reports under /home/user/output.
 ```
 
 Call `process` sub-command:

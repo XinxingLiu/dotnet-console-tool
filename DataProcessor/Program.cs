@@ -51,7 +51,7 @@ namespace DataProcessor
 
                     Console.WriteLine("Validating data.");
                     
-                    Console.WriteLine($"Finish Validation. See validation reports under {outputPath}.");
+                    Console.WriteLine($"Finish validation. See validation reports under {outputPath}.");
                     return 0;
                 });
             });

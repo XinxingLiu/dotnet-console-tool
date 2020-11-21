@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>FormDataProcessor</ToolCommandName>
+    <ToolCommandName>DataProcessor</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <Version>0.0.1</Version>
   </PropertyGroup>
