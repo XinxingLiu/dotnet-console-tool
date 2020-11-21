@@ -39,26 +39,75 @@ If you want to use a package on your NuGet server, point `package_source` to you
 
 ## Run
 
-See the help information with a `-h` or `--help` flag:
+### See the help information with a `-h` or `--help` flag
 
 ```bash
 DataProcessor --help
 ```
 
-Tool version:
+Console output:
+```bash
+ Version 0.0.1
+
+Usage: DataProcessor [options] [command]
+
+Options:
+  -?|-h|--help  Show help information
+  -v|--version  Show version information
+
+Commands:
+  process   Description for 'process' sub-command.
+  validate  Description for 'validate' sub-command.
+
+Use "DataProcessor [command] --help" for more information about a command.
+```
+
+### Tool version
 
 ```bash
 DataProcessor --version
 ```
 
-Help information for sub-commands:
+Console output:
+```bash
+ Version 0.0.1
+```
+
+### Help information for sub-commands
 
 ```bash
 DataProcessor validate -h
+```
+
+Console output:
+```bash
+Usage: DataProcessor validate [options]
+
+Options:
+  -?|-h|--help      Show help information
+  -i|--input-path   Specify multiple input data sources. 
+  -o|--output-path  Path to the directory for the validation reports.
+Extended help text for 'validate' sub-command.
+```
+
+```bash
 DataProcessor process -h
 ```
 
-Call `validate` sub-command:
+Console output:
+```bash
+Usage: DataProcessor process [options]
+
+Options:
+  -?|-h|--help          Show help information
+  -i|--input-path       Specify multiple input data sources. 
+  -o|--output-path      Path to the directory for the validation reports.
+  -s|--skip-validation  Skip validation or not.
+Extended help text for 'process' sub-command.
+```
+
+### Call `validate` sub-command
+
 ```bash
 DataProcessor validate -i /home/user/data-folder1 -i /home/user/data-folder2 -o /home/user/output
 ```
@@ -71,13 +120,16 @@ Validating data.
 Finish validation. See validation reports under /home/user/output.
 ```
 
-Call `process` sub-command:
+### Call `process` sub-command
+
 ```bash
 DataProcessor process -i /home/user/data-folder1 -i /home/user/data-folder2 -o /home/user/output -s
 ```
+
 Console output:
+
 ```bash
-Start validating. Data sources: 
+Start validating. Data sources:
         /home/user/data-folder1
         /home/user/data-folder2
 Skip validation.
